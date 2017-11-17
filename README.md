@@ -1,6 +1,6 @@
 # Movierama Demo Application
 
-Prerequisites Java 8 and Docker Engine
+Prerequisites Java 8, Maven and Docker Engine
 
 make sure to check your shell with: "docker-machine env default"
 
