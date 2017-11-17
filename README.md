@@ -4,7 +4,7 @@ Prerequisites Java 8, Maven and Docker Engine
 
 make sure to check your shell with: "docker-machine env default"
 
-movierama\src\main\containers>docker-compose up  (This will load mysql)  
+movierama\src\main\containers>(sudo) docker-compose up (or run)  (This will load mysql)  
 
 Make sure that the database is up http://192.168.99.100:8085/ (login credentials at docker-compose.xml)
 
