@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template :: head">      
+    <title>Movierama</title> 
+</head>
+<body>
+
+<div th:replace="template :: header">
+    <p>Header</p>
+</div>
+
+<div style="border:thin;border-style: solid;padding: 5px;">	
+	<div>	
+	     <span><b>Sort by</b></span>
+	     <span><a th:href="@{/likes}">Likes</a></span>   
+	     <span>|</span> 
+	     <span><a th:href="@{/dislikes}">Hates</a></span>
+	     <span>|</span>	
+	     <span><a th:href="@{/}">Date</a></span>	    
+	</div>	
+</div>
+
+<div th:each="m : ${movies}" style="border:thin;border-style: solid;padding: 5px;">
+	<h2 th:text="${m.title}">Movie Title</h2>
+	<div>	
+	    <span>Posted by</span>
+	    <a th:href="@{/user/{id}/(id=${m.publishedByUserId})}" th:text="${m.firstName} + ' ' + ${m.lastName}">First Name Last Name</a>	    
+	    <span th:text="${m.daysPublished}">5</span>
+	    <span>days ago</span>	    
+	</div>
+	<p th:utext="${m.description}">Movie Description</p>
+	<div>
+		<span th:text="${m.likes}">39</span>
+	 	<span>Likes</span>	    
+	    <span>|</span>
+	    <span th:text="${m.dislikes}">5</span>
+	    <span>Hates</span>
+	</div>
+</div>
+
+
+<footer th:replace="template :: footer" />
+</body>
+
+</html>

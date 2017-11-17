@@ -23,4 +23,6 @@ public interface MovieService {
 	
 	List<MovieView> getMoviesByName(String firstName, String familyName);
 
+	List<MovieView> getMoviesByUserId(Long userId);
+
 }

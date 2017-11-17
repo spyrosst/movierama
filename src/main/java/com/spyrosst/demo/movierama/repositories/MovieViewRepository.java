@@ -9,4 +9,6 @@ import com.spyrosst.demo.movierama.domain.MovieView;
 public interface MovieViewRepository extends JpaRepository<MovieView, Long> {
 
 	List<MovieView> findByFirstNameAndLastName(String firstName, String familyName);
+	
+	List<MovieView> findByPublishedByUserId(Long userId);
 }

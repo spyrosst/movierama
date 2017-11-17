@@ -53,7 +53,7 @@ public class MovieServiceImpl implements MovieService {
 
 	@Override
 	public List<MovieView> getMoviesAggregatedByOpinionsOrderByPublishedDateDesc() {
-		Sort sort = new Sort(new Order(Direction.DESC, "published_date"));
+		Sort sort = new Sort(new Order(Direction.DESC, "publishedDate"));
 		return movieViewRepo.findAll(sort);
 	}
 
@@ -72,6 +72,11 @@ public class MovieServiceImpl implements MovieService {
 	@Override
 	public List<MovieView> getMoviesByName(String firstName, String familyName) {
 		return movieViewRepo.findByFirstNameAndLastName(firstName, familyName);
+	}
+	
+	@Override
+	public List<MovieView> getMoviesByUserId(Long userId) {
+		return movieViewRepo.findByPublishedByUserId(userId);
 	}
 
 }

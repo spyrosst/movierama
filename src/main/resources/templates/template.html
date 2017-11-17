@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+	<meta charset="UTF-8" />
+</head>
+<body>
+	<header th:fragment="header" th:remove="tag">
+		<header>
+			<div id="header" style="border:thin;border-style: solid;padding: 5px;">
+				<span><h1>Movierama</h1></span> 
+				<span><a href="#" th:href="@{/}">Home</a></span>
+				<span><a href="#" th:href="@{/users/login}">Login</a></span>
+				<span><a href="#" th:href="@{/users/register}">Register</a></span>
+				<span><a href="#" th:href="@{/movies/create}">Create Movie</a></span>
+				<span>Welcome, <b>(User Name)</b></span> 
+				<span><a href="#" th:href="@{/users/login}">Login</a></span>
+			</div>
+		</header>
+	</header>
+	<footer th:fragment="footer"> </footer>
+</body>
+</html>

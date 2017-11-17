@@ -18,9 +18,11 @@ public class MovieView {
 
 	private String title;
 
-	private String description;
+	private String description;	
 
 	private Date publishedDate;
+
+	private Long publishedByUserId;
 
 	private String firstName;
 
@@ -62,6 +64,14 @@ public class MovieView {
 
 	public void setPublishedDate(Date publishedDate) {
 		this.publishedDate = publishedDate;
+	}	
+
+	public Long getPublishedByUserId() {
+		return publishedByUserId;
+	}
+
+	public void setPublishedByUserId(Long publishedByUserId) {
+		this.publishedByUserId = publishedByUserId;
 	}
 
 	public String getFirstName() {
@@ -107,8 +117,9 @@ public class MovieView {
 	@Override
 	public String toString() {
 		return "MovieView [id=" + id + ", title=" + title + ", description=" + description + ", publishedDate="
-				+ publishedDate + ", firstName=" + firstName + ", lastName=" + lastName + ", likes=" + likes
-				+ ", dislikes=" + dislikes + ", daysPublished=" + daysPublished + "]";
+				+ publishedDate + ", publishedByUserId=" + publishedByUserId + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", likes=" + likes + ", dislikes=" + dislikes + ", daysPublished="
+				+ daysPublished + "]";
 	}
 
 }
