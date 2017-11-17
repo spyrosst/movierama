@@ -13,4 +13,5 @@ movierama>mvn clean install  (This will load test data in addition)
 movierama>mvn spring-boot:run -Drun.arguments="--spring.jpa.properties.hibernate.hbm2ddl.auto=none"
 
 http://localhost:9080/movierama/health
+
 http://localhost:9080/movierama
